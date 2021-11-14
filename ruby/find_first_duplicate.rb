@@ -1,5 +1,18 @@
 def find_first_duplicate(arr)
-  # type your code in here
+  uniques = []
+  result = ""
+  arr.each do |i|
+    if uniques.include?(i)
+      result = i
+      break
+    end
+    uniques << i
+  end
+  if result != ""
+    result
+  else
+    -1
+  end
 end
 
 if __FILE__ == $PROGRAM_NAME
